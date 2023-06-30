@@ -57,5 +57,23 @@ namespace FakeXieCheng.Controllers
             var touristRouteReture = mapper.Map<TouristRouteDTO>(touristRouteModel);
             return CreatedAtRoute("GetTouristRoutesById", new { touristRouteId = touristRouteReture.Id }, touristRouteReture);
         }
+
+        [HttpPut("{touristRouteId}")]
+        public IActionResult UpdateTouristRoute([FromRoute]Guid touristRouteId, [FromBody]TouristRouteForUpdateDTO touristRouteForUpdateDTO)
+        {
+            if (!touristRouteRepository.IsTouristRouteExist(touristRouteId))
+            {
+                return NotFound("旅游路线找不到");
+            }
+            var touristRouteFromRepo = touristRouteRepository.GetTouristRoute(touristRouteId);
+            //1.映射dto
+            //2.更新dto
+            //映射model
+            mapper.Map(touristRouteForUpdateDTO, touristRouteFromRepo);
+            touristRouteRepository.Save();
+            return NoContent();
+            
+        }
+        
     }
 }

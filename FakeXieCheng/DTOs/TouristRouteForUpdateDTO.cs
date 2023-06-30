@@ -1,10 +1,9 @@
-﻿using FakeXieCheng.Models;
+﻿using System.Collections.Generic;
 using System;
-using System.Collections.Generic;
 
 namespace FakeXieCheng.DTOs
 {
-    public class TouristRouteForCreationDTO
+    public class TouristRouteForUpdateDTO
     {
         public string Title { get; set; }
 

@@ -31,7 +31,7 @@ namespace FakeXieCheng.Profiles
                     dest => dest.Id,
                     opt => opt.MapFrom(scr => new Guid())
                 );
-            ;
+            CreateMap<TouristRouteForUpdateDTO, TouristRoute>();
         }
     }
 }
