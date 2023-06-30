@@ -11,6 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using FakeXieCheng.Services;
+using Microsoft.AspNetCore.Mvc.Formatters;
 
 namespace FakeXieCheng
 {
@@ -30,12 +31,16 @@ namespace FakeXieCheng
         {
             //services.AddRazorPages();
             //services.AddMvc();
-            services.AddControllers();
+            services.AddControllers(setupAction=>
+            {
+                setupAction.ReturnHttpNotAcceptable = true;
+               
+            }).AddXmlDataContractSerializerFormatters();
 
             services.AddDbContext<AppDbContext>();
 
             services.AddTransient<ITouristRouteRepository, TouristRouteRepository>();
-
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
         }
 

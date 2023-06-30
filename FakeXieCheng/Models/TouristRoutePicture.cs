@@ -14,5 +14,6 @@ namespace FakeXieCheng.Models
         [ForeignKey("TouristRouteId")]
         public Guid TouristRouteId { get; set; }
         public TouristRoute TouristRoute { get; set; }
+
     }
 }

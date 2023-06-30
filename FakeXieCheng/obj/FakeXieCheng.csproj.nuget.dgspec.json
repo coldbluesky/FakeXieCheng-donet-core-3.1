@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CSharpProjects\\WebApplication1\\FakeXieCheng.csproj": {}
+    "D:\\CSharpProjects\\FakeXieCheng\\FakeXieCheng.csproj": {}
   },
   "projects": {
-    "D:\\CSharpProjects\\WebApplication1\\FakeXieCheng.csproj": {
+    "D:\\CSharpProjects\\FakeXieCheng\\FakeXieCheng.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CSharpProjects\\WebApplication1\\FakeXieCheng.csproj",
+        "projectUniqueName": "D:\\CSharpProjects\\FakeXieCheng\\FakeXieCheng.csproj",
         "projectName": "FakeXieCheng",
-        "projectPath": "D:\\CSharpProjects\\WebApplication1\\FakeXieCheng.csproj",
+        "projectPath": "D:\\CSharpProjects\\FakeXieCheng\\FakeXieCheng.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\CSharpProjects\\WebApplication1\\obj\\",
+        "outputPath": "D:\\CSharpProjects\\FakeXieCheng\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.30, )"
@@ -58,6 +62,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.30, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
